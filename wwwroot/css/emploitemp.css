@@ -1,0 +1,88 @@
+
+
+
+
+.contetable{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.contetable .listestagiares{
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    min-height: 600px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0,0, 0.08);
+    border-radius: 20px;
+   
+}
+
+
+.listetitre{
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contetable table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+    
+
+table td,table th{
+    padding: 12px 15px;
+    
+    text-align: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 20%;
+}
+
+  
+.contetable table thead td{
+    font-weight: 700;
+
+}
+table tbody tr{
+    height: 150px;
+}
+
+.contetable table tr{
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
+   
+
+}
+.contetable table  tr:last-child{
+    border-bottom: none;
+}
+
+.contetable table tbody td:hover{
+    background: #f5821f;
+    color: #fff;
+}
+
+.contetable table tr td{
+    padding: 20px;
+
+}
+.contetable table tr td:last-child{
+    text-align: end;
+
+}
+.contetable table tr td:nth-child(2){
+    text-align: end;
+}
+.contetable table tr td:nth-child(3){
+    text-align: center;
+}
+
+

@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Home Page"; 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection : admin</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="lib/awsome-css/all.css">
+    <link rel="stylesheet" href="lib/awsome-css/all.min.css">
+
+    <link rel="stylesheet" href="lib/bootstrap/bootsrap-css/bootstrap.min.css">
+</head>
+<body>
+
+
+
+    <div class="contai">
+        <div class="conet">
+            <div class="left">
+
+                <div class="logo">
+
+
+                    <span class="icon">
+                        <img src="lib/imgicon/sh1.png">
+                    </span>
+
+                    <span class="title" id="titl">Gestion Stagiaires</span>
+
+                </div>
+
+            </div>
+            <div class="right">
+                <p> Connexion Administrateur </p>
+                @if (ViewBag.Error != null)
+                {
+                    // Injecting JavaScript here 
+                    <div class="alert alert-danger" role="alert">
+                    @ViewBag.error
+                </div>
+                }
+               
+
+                <form class="row g-3" method="post" asp-controller="Home" asp-action="login">
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" id="nom" placeholder="Nom" name="nom">
+                        <i class="fa-solid fa-circle-user iconese"></i>
+                    </div>
+                    <div class="col-md-10">
+
+                        <input type="text" class="form-control" id="prenom" placeholder="Prénom" name="prenom">
+                        <i class="fa-solid fa-circle-user iconese"></i>
+                    </div>
+                    <div class="col-10">
+                        <input type="password" class="form-control" id="mdt" placeholder="le mot de passe" name="password">
+
+                        <i class="fa-solid fa-lock iconese"></i>
+                        <div>
+                            <span class="eyese" onclick="myFunction()">
+                                <i id="hide" class="fa-solid fa-eye"></i>
+                                <i id="hideslash" class="fa-solid fa-eye-slash"></i>
+                            </span>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-10">
+                        <button class="btn btn-primary btnes" type="submit" value="Login">Connexion</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!------------------pour les link js dans les page------------------->
+
+    <script src="js/login.js"></script>
+
+    <!------------------link js pour les framework----------------->
+    <script src="lib/awsome-js/all.js"></script>
+    <script src="lib/awsome-js/all.min.js"></script>
+    <script src="lib/bootstrap/bootsrap-js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

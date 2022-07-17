@@ -1,0 +1,484 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+  
+}
+
+
+.containeres{
+    position: relative;
+    width: 100%;
+    
+}
+
+/********************************pour le sidebar **********************/
+.navigationes{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #f5821f;
+    
+    border-left: 10px solid #f5821f;
+    transition: 0.5s;
+    overflow: hidden;
+}
+#titl{
+    font-size: 21px;
+    margin-top: 10px;
+}
+.navigationes.activese{
+    width: 80px;
+}
+.navigationes ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigationes ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    margin-left: -28px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+}
+.navigationes ul li:hover,
+.navigationes ul li.hovered{
+    background-color: #fff;
+    width: 500px;
+}
+
+.navigationes ul li:nth-child(1){
+    margin-bottom: 40px;
+pointer-events: none;
+
+}
+
+.navigationes ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color:#fff ;
+}
+.navigationes ul li:hover a,
+.navigationes ul li.hovered a{
+    color: #f5821f;
+}
+.navigationes ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+   
+}
+.navigationes ul li a .icon .icones{
+    font-size: 22px;
+}
+.navigationes ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+
+
+
+/*********************************pour le navbar top**********************/
+
+.maines{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background:white;
+    transition: 0.5s;
+}
+.maines.activese{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0px 7px 25px rgba(0, 0,0, 0.08);
+}
+.toggle{
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+
+}
+
+
+/****************************pour les nofication est message***************************/
+
+
+.iconmessage{
+    font-size: 24px;
+    color: #2a2185;
+    margin-left: 90px;
+}
+.notifi{
+    margin-right:75px ;
+    position: relative;
+}
+
+.iconnotifi{
+    font-size: 24px;
+    color: #2a2185;
+}
+
+
+
+/***************************pour les recherche**********************/
+.recherch{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+    margin-left: 190px;
+     
+    
+}
+.recherch label{
+    position: relative;
+    width: 100%;
+
+}
+.recherch label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid #ced4da;
+}
+.recherch label .seraicon{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    color: #2a2185;
+}
+
+
+
+
+
+/**********************************les nom de page*****************************/
+.nompage{
+    margin-left: 50px;
+    margin-top: 40px;
+   
+}
+
+.lispage{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.lispage li a{
+    text-decoration: none;
+}
+
+
+/*****************************pour les card de nomber**************************/
+/**********************************pour les card dans le main******************************/
+.cardboxes{
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+    
+
+}
+.cardboxes .cardes{
+   position: relative;
+    width: 47%;
+    background: #fff;
+    padding: 38px;
+    
+    margin: 5px;
+    display: inline-block;
+    border-radius: 20px;
+   justify-content: space-between;
+   cursor: pointer;
+    box-shadow: 0px 7px 25px rgba(0, 0,0, 0.08);
+}
+
+.cardboxes .cardes .numberses{
+   position: relative;
+   font-weight: 500;
+   font-size: 25px;
+   color: #2a2185;
+}
+
+.cardboxes .cardes .cardnames{
+    color: #999;
+    font-size: 18px;
+    margin-top: 15px;
+    
+ 
+}
+
+.cardboxes .cardes .iconbx{
+    position: absolute;
+    top: 27px;
+    left: 160px;
+    font-size: 35px;
+    color: #999;
+}
+
+.cardboxes .cardes:hover{
+    background-color: #2a2185;
+}
+.cardboxes .cardes:hover .numberses,
+.cardboxes .cardes:hover .cardnames,
+.cardboxes .cardes:hover .iconbx{
+    color: #fff;
+}
+
+
+.details{
+    position: relative;
+     width: 100%;
+     padding: 20px;
+     margin-top: 25px;
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+   
+    
+   
+}
+.details .recentorder{
+    position: relative;
+    width: 59%;
+    min-height: 500px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0,0, 0.08);
+    border-radius: 20px;
+   
+}
+
+
+/*******************************************pour les message*******************************/
+
+
+.details .recentmessage{
+    position: relative;
+    
+    width: 39%;
+    min-height: 500px;
+    background: #fff;
+    margin-left: 10px;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0,0, 0.08);
+    border-radius: 20px;
+}
+
+
+
+
+.clock{
+ width: 180px;
+ height: 180px;
+ position: relative;
+   margin-left: 85px;
+   margin-top: 40px;
+   display: flex;
+align-items: center;
+justify-content: center;
+   background:url(../imgicon/clock.png);
+   background-size: cover;
+   border: 4px solid #fff;
+   border-radius: 50%;
+   box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+               inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+               0 15px 15px rgba(0, 0,0, 0.05),
+               inset 0 15px 15px rgba(0, 0,0, 0.05) ;
+  
+}
+
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .heur,
+.clock .minut,
+.clock .second{
+    position: absolute;
+
+}
+
+.clock .heur, .hr{
+    width: 100px;
+    height: 100px;
+}
+.clock .minut, .min{
+    width: 130px;
+    height: 130px;
+}
+.clock .second, .sec{
+    width: 170px;
+    height: 170px;
+}
+
+.hr, .min, .sec{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before{
+
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    margin-top: 15px;
+    background: #f5821f;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.min::before{
+
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    margin-top: 18px;
+    background: #000;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sec::before{
+
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    margin-top: 28px;
+    background: #000;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
+
+/***************************clock digital**************************/
+
+.timedigital{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.timedigital div{
+    font-size: 28px;
+    font-weight: 600;
+    padding-left: 5px;
+    color: var(--clr);
+}
+
+.timedigital div:nth-child(1)::after,
+.timedigital div:nth-child(2)::after{
+    content: ':';
+    right: -5px;
+   
+    
+}
+
+/**************************date ***********************/
+.datetimes{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 15px;
+}
+
+
+
+/***************************************les span pour formulaire detail*******************************/
+
+
+
+.detailes span{
+
+    font-weight: 800;
+    font-size: 17px;
+
+    
+}
+
+.detailes {
+    justify-content: space-between;
+}
+
+
+
+/********************************************pour le responsive************************************/
+
+@media(max-width:991px){
+    .navigationes{
+        left: -300px;
+
+    }
+    .navigationes.activese{
+        width: 300px;
+        left: 0;
+    }
+    .maines{
+        width: 100%;
+        left: 0;
+    }
+    .maines.activese{
+        left: 300px;
+
+    }
+   
+  
+}

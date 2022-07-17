@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Gestion_des_Stagiaires.Models.Trainee
+<form class="row g-3" method="post" asp-controller="Trainees" asp-action="Update">
+    <div class="col-md-6">
+        <input type="hidden" class="form-control" id="nom" placeholder="Nom" name="Id" value="@Model.Id">
+
+    </div>
+    <div class="col-md-6">
+        <input type="text" class="form-control" id="nom" placeholder="Nom" name="lastName" value="@Model.lastName">
+
+    </div>
+    <div class="col-md-6">
+
+        <input type="text" class="form-control" id="prenom" placeholder="Prénom" name="FirstName" value="@Model.FirstName">
+    </div>
+    <div class="col-12">
+        <input type="text" class="form-control" id="organisme" placeholder="le nom de organisme" name="Organism" value="@Model.Organism">
+    </div>
+    <div class="col-12">
+
+        <textarea class="form-control" id="theme" placeholder="Théme de stagiaire" name="ThemeTitle" value="@Model.ThemeTitle"></textarea>
+    </div>
+
+    <div class="col-md-6">
+        <input type="text" class="form-control" id="structure" placeholder="Structure" name="Structure" value="@Model.Structure">
+    </div>
+    <div class="col-md-6">
+        <input type="text" class="form-control" id="direction" placeholder="Direction" name="Direction" value="@Model.Direction">
+    </div>
+
+    <div class="col-6">
+        <input type="text" class="form-control" id="cadreur" placeholder="Nom de L'encadreur">
+    </div>
+    <div class="col-6">
+        <input type="text" class="form-control" id="dureé" placeholder="Dureé de Stage" name="TrainingDuration" value="@Model.TrainingDuration">
+    </div>
+    <div class="col-md-6">
+        <label for="datedebut" class="form-label">Date de debut</label>
+        <input type="date" class="form-control" id="datedebut" name="TrainingStartedOn" value="@Model.TrainingStartedOn">
+    </div>
+    <div class="col-md-6">
+        <label for="datefin" class="form-label">Date de la Fin</label>
+        <input type="date" class="form-control" id="datefin" name="TrainingEndedOn" value="@Model.TrainingEndedOn">
+    </div>
+    <div class="col-6">
+        <input type="text" class="form-control" id="attestation" placeholder="Numero de attestation" name="AttestationNumber" value="@Model.AttestationNumber">
+    </div>
+    <div class="col-6">
+        <input type="text" class="form-control" id="attestation" placeholder="Numero de dossier" name="DossierNumber" value="@Model.DossierNumber">
+    </div>
+    <button class="btn btn-primary" type="submit" value="Update">Modifier</button>
+</form>

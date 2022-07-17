@@ -1,0 +1,259 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!------------------pour le nom de page---------------->
+@model Gestion_des_Stagiaires.Models.TraineesList
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+
+    <div style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="nompage">
+        <ol class="breadcrumb lispage">
+            <li class="breadcrumb-item "><a>Administrateur</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Stagiaires</li>
+
+
+        </ol>
+    </div>
+
+    <!--------------------------------pour les deux table-------------------------->
+    <div class="contetable">
+        <div class="listestagiares">
+            <div class="listetitre">
+                <h2 style="color: #0d6efd;">Liste des stagiaires:</h2>
+
+                <button type="button" class="btn btn-primary btnplus" id="Get_AddTrainee_PartialView">
+                    Ajouter stagiaire
+                </button>
+
+
+
+            </div>
+
+            <table class="tableau">
+                <thead>
+                    <tr>
+                        <th>Nom & Prenom</th>
+                        <th>Organisme</th>
+                        <th>Direction</th>
+                        <th>Dureé</th>
+                        <th>Encadreur</th>
+                        <th>Théme</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                @foreach (var trainee in Model.Trainees)
+                {
+                    <tbody>
+                        <tr>
+
+
+                            <td>@trainee.lastName   @trainee.FirstName</td>
+                            <td>@trainee.Organism</td>
+                            <td>@trainee.Structure</td>
+                            <td>@trainee.TrainingDuration</td>
+                            <td>@trainee.Organism</td>
+                            <td>App web pour suivi les stagiaires</td>
+                            <td class="dropdown">
+                                <a class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">action</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
+                                    <li><button class="dropdown-item" type="button" id="UpdateBtn" name="@trainee.Id" onclick="Update(this)">Modifier</button></li>
+
+
+                                    <li><button class="dropdown-item" type="button" onclick="location.href='@Url.Action("Delete", "Trainees",new {id=trainee.Id })'" >Supprimer</button></li>
+                                    <li><button class="dropdown-item" type="button" id="DetailsBtn" name="@trainee.Id" onclick="Details(this)">Details</button></li>
+                                </ul>
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+                }
+
+
+            </table>
+
+            <br>
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Modal formulair pour ajouter un stagiaire -->
+    <div class="modal fade contentmodel" id="CreateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Ajouter un stagiaire</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="partialViewContent">
+
+                    </div>
+                    <div class="modal-footer">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal formulair pour modifier les information de  stagiaire -->
+    <div class="modal fade contentmodel" id="UpdateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modifier les information de stagiaire</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="traineeUpdate_partialViewContent">
+
+                    </div>
+                    <div class="modal-footer">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+        <!-- Modal formulair pour detail de  stagiaire -->
+        <div class="modal fade contentmodel " id="DetailsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content ">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Detail de  stagiaire </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="traineeDetails_partialViewContent">
+
+                        </div>
+                        <div class="modal-footer">
+
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    @*add trainee modal*@
+    <script>
+
+    $(document).ready(function () {
+
+        $('#Get_AddTrainee_PartialView').click(function () {
+
+            var requestUrl = '@Url.Action("AddTrainee_PartialView", "Trainees")';
+
+            $.get(requestUrl)
+
+            .done(function (responsedata) {
+
+                console.log("success");
+
+                $("#partialViewContent").html(responsedata);
+
+                $('#CreateModal').modal('show')
+
+            })
+            .fail(function () {
+                alert("error");
+            })
+            .always(function () {
+                console.log("finished");
+            });
+
+        })
+
+        });
+
+
+    </script>
+    @*Update trainee modal*@
+<script>
+
+
+        function Update(param) {
+
+            var id_ = $(param).attr("name");
+
+            var requestUrl = '@Url.Action("UpdateTrainee_PartialView", "Trainees")?id=' + id_;
+
+            $.get(requestUrl)
+
+            .done(function (responsedata) {
+
+                console.log("success");
+
+                $("#traineeUpdate_partialViewContent").html(responsedata);
+
+                $('#UpdateModal').modal('show')
+
+            })
+            .fail(function () {
+                alert("error");
+            })
+            .always(function () {
+                console.log("finished");
+            });
+
+
+        }
+         function Details(param) {
+
+            var id_ = $(param).attr("name");
+
+            var requestUrl = '@Url.Action("GetTrainee_PartialView", "Trainees")?id=' + id_;
+
+            $.get(requestUrl)
+
+            .done(function (responsedata) {
+
+                console.log("success");
+
+                $("#traineeDetails_partialViewContent").html(responsedata);
+
+                $('#DetailsModal').modal('show')
+
+            })
+            .fail(function () {
+                alert("error");
+            })
+            .always(function () {
+                console.log("finished");
+            });
+
+
+        }
+</script>
+
+</body>
+
+
+</html>

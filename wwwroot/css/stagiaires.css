@@ -1,0 +1,56 @@
+
+.contetable{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.contetable .listestagiares{
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    min-height: 600px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0,0, 0.08);
+    border-radius: 20px;
+   
+}
+
+
+.listetitre{
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+    
+
+
+.tableau{
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.tableau td,.tableau th{
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+.tableau th{
+    background-color:#fff ;
+    color: #000;
+    font-weight:700;
+}
+
+.tableau tbody tr:hover{
+    background: #f5821f;
+    color: #fff;
+}
+
+
+
+

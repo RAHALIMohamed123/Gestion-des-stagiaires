@@ -1,0 +1,106 @@
+/******************************pour table***************************/
+
+
+
+.details{
+    position: relative;
+     width: 100%;
+    padding: 20px;
+   
+    
+   
+}
+.details .recentorder{
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0,0, 0.08);
+    border-radius: 20px;
+    display: inline-block;
+}
+.recentorder .cardorder{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.recentorder .cardorder h2{
+  font-weight: 600;
+  color: #2a2185;
+
+
+}
+
+.recentorder .cardorder .btn{
+    position: relative;
+    padding: 5px 10px;
+    background: #2a2185;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+
+}
+
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+   margin-top: 30px;
+    
+}
+
+table td,table th{
+    padding: 12px 15px;
+    
+    text-align: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+  
+.details table thead td{
+    font-weight: 700;
+
+}
+
+.details .recentorder table tr{
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   
+
+}
+.details .recentorder table  tr:last-child{
+    border-bottom: none;
+}
+
+.details .recentorder table tbody tr:hover{
+    background: #f5821f;
+    color: #fff;
+}
+
+.details .recentorder table tr td{
+    padding: 20px;
+
+}
+.details .recentorder table tr td:last-child{
+    text-align: end;
+
+}
+.details .recentorder table tr td:nth-child(2){
+    text-align: end;
+}
+.details .recentorder table tr td:nth-child(3){
+    text-align: center;
+}
+
+
+
+.status {
+    padding: 2px 4px;
+    background:#f00;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}

@@ -1,0 +1,53 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<form class="row g-3" method="post" asp-controller="Trainees" asp-action="Add">
+
+    <div class="col-md-6">
+        <input type="text" class="form-control" id="nom" placeholder="Nom" name="lastName">
+    </div>
+    <div class="col-md-6">
+
+        <input type="text" class="form-control" id="prenom" placeholder="Prénom" name="FirstName">
+    </div>
+    <div class="col-12">
+        <input type="text" class="form-control" id="organisme" placeholder="le nom de organisme" name="Organism">
+    </div>
+    <div class="col-12">
+
+        <textarea class="form-control" id="theme" placeholder="Théme de stagiaire" name="ThemeTitle"></textarea>
+    </div>
+
+    <div class="col-md-6">
+        <input type="text" class="form-control" id="structure" placeholder="Structure" name="Structure">
+    </div>
+    <div class="col-md-6">
+        <input type="text" class="form-control" id="direction" placeholder="Direction" name="Direction">
+    </div>
+
+    <div class="col-6">
+        <input type="text" class="form-control" id="cadreur" placeholder="Nom de L'encadreur">
+    </div>
+    <div class="col-6">
+        <input type="text" class="form-control" id="dureé" placeholder="Dureé de Stage" name="TrainingDuration">
+    </div>
+    <div class="col-md-6">
+        <label for="datedebut" class="form-label">Date de debut</label>
+        <input type="date" class="form-control" id="datedebut">
+    </div>
+    <div class="col-md-6">
+        <label for="datefin" class="form-label">Date de la Fin</label>
+        <input type="date" class="form-control" id="datefin">
+    </div>
+    <div class="col-6">
+        <input type="text" class="form-control" id="attestation" placeholder="Numero de attestation" name="AttestationNumber">
+    </div>
+    <div class="col-6">
+        <input type="text" class="form-control" id="attestation" placeholder="Numero de dossier" name="DossierNumber">
+    </div>
+    <button class="btn btn-primary" type="submit" value="Add">Ajouter</button>
+</form>
+
+              

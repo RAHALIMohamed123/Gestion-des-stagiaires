@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+
+*@
+@model Gestion_des_Stagiaires.Models.Trainee
+
+<p><span>Nom & Prénom : </span>@Model.lastName @Model.FirstName </p>
+<p><span>Organisme : </span> @Model.Organism </p>
+<p><span>Théme : </span>@Model.ThemeTitle</p>
+<p><span>Structure : </span> @Model.Structure </p>
+<p><span> Direction : </span> @Model.Direction </p>
+<p><span> Encadreur:  </span> Rahali mohamed </p>
+<p><span>Dureé : </span> @Model.TrainingDuration </p>
+<p><span>Date de debut de stage:  </span> @Model.TrainingStartedOn </p>
+<p><span>Date de fin de stage:  </span> @Model.TrainingEndedOn </p>
+<p><span>Numero de dossier : </span>  @Model.DossierNumber </p>
+<p><span>Numero de attestation : </span> @Model.AttestationNumber </p>

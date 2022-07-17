@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrateur</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/lib/awsome-css/all.css">
+    <link rel="stylesheet" href="~/lib/awsome-css/all.min.css">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/bootsrap-css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/stagiaires.css">
+</head>
+<body>
+
+    <!-------------------------------------------------------->
+    <div class="containeres">
+        <div class="navigationes">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <img src="~/lib/imgicon/sh1.png" style="width: 65px; height: 65px; margin-top: 10px;">
+                        </span>
+
+                        <span class="title" id="titl">Gestion Stagiaires</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a asp-controller="Trainees" asp-action="Stagiaires" type="submit">
+                        <span class="icon">
+                            <i class="fa-solid fa-users icones"></i>
+
+                        </span>
+
+                        <span class="title">Stagiaires</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="apprentisage.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-user-group icones"></i>
+                        </span>
+                        <span class="title">Apprentisage</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="emploitemps.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-calendar-days icones"></i>
+                        </span>
+                        <span class="title">Les emploi du temps</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <i class="fa-solid fa-message icones"></i>
+                        </span>
+                        <span class="title">Les demande de stage</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <i class="fa-solid fa-circle-user icones"></i>
+                        </span>
+                        <span class="title">Ajouter admin</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <i class="fa-solid fa-box-archive icones"></i>
+                        </span>
+                        <span class="title">Archives</span>
+                    </a>
+                </li>
+
+
+                <br>
+                <br>
+                <br>
+                <li>
+                    <a asp-controller="Home" asp-action="logout" type="submit">
+                        <span class="icon">
+                            <i class="fa-solid fa-arrow-right-from-bracket icones"></i>
+                        </span>
+                        <span class="title">Sing out</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!------------------pour le main---------------->
+        <div class="maines">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+
+                <div class="recherch">
+                    <label>
+                        <input type="text" placeholder="search here ">
+                        <i class="fa-solid fa-magnifying-glass seraicon"></i>
+                    </label>
+                </div>
+
+
+
+                <div class="nmesage ">
+                    <a type="button" class="position-relative">
+                        <i class="fa-solid fa-message iconmessage"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            5
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </a>
+
+
+
+                </div>
+
+                <div class="notifi">
+                    <a type="button" class="position-relative">
+                        <i class="fa-solid fa-bell iconnotifi"></i>
+
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            9
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </a>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+            @RenderBody()
+
+
+            @*<footer class="border-top footer text-muted">
+                    <div class="container">
+                        &copy; 2022 - Gestion_des_Stagiaires - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </div>
+                </footer>
+                <script src="~/lib/jquery/dist/jquery.min.js"></script>
+                <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                <script src="~/js/site.js" asp-append-version="true"></script>
+                @await RenderSectionAsync("Scripts", required: false)*@
+        </div>
+    </div>
+    <!------------------link js----------------->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/awsome-js/all.js"></script>
+    <script src="~/lib/awsome-js/all.min.js"></script>
+    <!-------------------------code pour js ----------------------------->
+
+    <script src="~/js/admine.js"></script>
+
+    <script src="~/js/clock.js"></script>
+    <script src="~/lib/bootstrap/bootsrap-js/bootstrap.min.js"></script>
+    <script src="~/lib/bootstrap/bootsrap-js/bootstrap.bundle.js"></script>
+    
+    
+</body>
+</html>
